@@ -120,6 +120,12 @@
 	using (snum)
 	group by snum
 	order by snum;
+	->select snum,sname,max(amt) as 'largest order'
+	  from orders 
+	  join salespeople
+	  using(snum)
+ 	  group by snum
+ 	  order by snum;
 
 
 13. Find customers in San Jose who have a rating above 200.
